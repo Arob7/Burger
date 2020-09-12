@@ -1,16 +1,5 @@
 const express = require("express");
-const mysql = require("mysql");
+require("dotenv").config();
+var PORT = process.env.PORT || 8080;
 
-var connection = mysql.createConnection({
-  host: "localhost",
-
-  // Your port; if not 3306
-  port: 3306,
-
-  // Your username
-  user: "root",
-
-  // Your password
-  password: process.env.mySqlPW,
-  database: "burgers_db",
-});
+var app = express();
